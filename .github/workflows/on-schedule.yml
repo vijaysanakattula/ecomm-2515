@@ -1,0 +1,10 @@
+name: First Workflow # workflow name
+on: 
+  schedule: 
+    - cron: '0 10 * * *' #min hour DOM MON DoW --> UTC
+jobs: 
+  firstJob:   # job name
+    runs-on: ubuntu-latest # windows-latest, macos-latest
+    steps: 
+      - name: greet  # name of instruction
+        run: echo "hello world"  # instruction to execute
