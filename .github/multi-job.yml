@@ -10,18 +10,18 @@ jobs:
         run: echo "welcome to multi job"
       - name: welcome
         run: echo "welcome to first-job"  # manual shell commands
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: build
-          run: echo "welcome to multi job"
-        - name: greet
-          run: echo "welcome to multi job"
-      deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: deploy
-          run: echo "welcome to multi job"
-        - name: greet
-          run: echo "welcome to multi job"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "welcome to multi job"
+      - name: greet
+        run: echo "welcome to multi job"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "welcome to multi job"
+      - name: greet
+        run: echo "welcome to multi job"
           
