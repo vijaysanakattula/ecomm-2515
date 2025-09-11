@@ -9,4 +9,10 @@ jobs:
       - name: greet
         run: echo "welcome to multi job"
       - name: welcome
-        run: echo "multi job is open in another window"
+        run: echo "welcome to first-job"  # manual shell commands
+    second-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: greet
+          run: echo "welcome to multi job"
+          
