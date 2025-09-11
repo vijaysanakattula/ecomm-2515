@@ -3,16 +3,25 @@ on:
   - workflow_dispatch  # manual trigger
   - push  # on push it will trigger
 jobs:
-  first-job:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: greet
+      - name: test
         run: echo "welcome to multi job"
       - name: welcome
         run: echo "welcome to first-job"  # manual shell commands
-    second-job:
+    build:
       runs-on: ubuntu-latest
       steps:
+        - name: build
+          run: echo "welcome to multi job"
+        - name: greet
+          run: echo "welcome to multi job"
+      deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: deploy
+          run: echo "welcome to multi job"
         - name: greet
           run: echo "welcome to multi job"
           
