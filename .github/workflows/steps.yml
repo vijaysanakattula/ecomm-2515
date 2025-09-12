@@ -11,7 +11,6 @@ jobs:
         run: cat /etc/os-release
       - name: Memory and Storage
         run:
-          free -m
           free -h
           df -h
           lscpu
