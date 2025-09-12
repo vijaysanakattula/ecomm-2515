@@ -10,7 +10,7 @@ jobs:
         if: failure()
         run: cat /etc/os-release
       - name: Memory and Storage
-        run:
+        run: |
           free -m
           free -h
           df -h
