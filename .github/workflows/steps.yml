@@ -11,6 +11,14 @@ jobs:
         run: cat /etc/os-release
       - name: Memory and Storage
         run:
+          free -m
           free -h
           df -h
           lscpu
+      - name: install node js
+        uses: actions/setup-node@v5.0.0
+        with: 
+          node-version: 20
+      - name: check node version 
+        run: node -v
+        
